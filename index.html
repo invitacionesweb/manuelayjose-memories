@@ -1,0 +1,331 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANU Y JOSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" />
+
+</head>
+<body>
+    <header>
+       <div class="novios">
+       </div>
+    </header>
+    <h2  data-aos="fade-up" class="title">Faltan:</h2>
+    <div class="contador">
+        <div class="bloque">
+          <div data-aos="fade-up" id="dias" class="numero"></div>
+          <div data-aos="fade-up" class="etiqueta">Días</div>
+        </div>
+
+        <div class="bloque">
+          <div data-aos="fade-up" id="horas" class="numero"></div>
+          <div data-aos="fade-up" class="etiqueta">horas</div>
+        </div>
+
+        <div class="bloque">
+          <div data-aos="fade-up" id="minutos" class="numero"></div>
+          <div data-aos="fade-up" class="etiqueta">minutos</div>
+        </div>
+
+        <div class="bloque">
+          <div data-aos="fade-up" id="segundos" class="numero"></div>
+          <div data-aos="fade-up" class="etiqueta">segundos</div>
+        </div>
+    </div>
+<!--
+      <H2 id="mensaje" class="mensaje-final title" style="display: none;">LLEGÓ EL DÍA</H2>
+
+-->
+
+  <main>
+    <h3 class="quote" data-aos="fade-up" >Tantas siglos, <br> tantos mundos, <br> tanto espacio <br> y coincidir.</h3><br>
+    <img  data-aos="fade-up"  class="fecha" src="./img-editables/fecha.png" alt="">
+    <div class="information">
+
+
+      <div  class="information-bloque">
+        <img data-aos="fade-up" src="./img-editables/relicario.png" alt="">
+        <h3 data-aos="fade-up">Ceremonia</h3>
+        <p data-aos="fade-up">10:00 AM - Iglesia Nuestra Señora <br> de la
+Consolata.</p>
+        <a  data-aos="fade-up" class="boton" target="_blank" href="google.com/maps/place/Parroquia+Nuestra+Señora+de+la+Consolata,+Medellin/@6.249053,-75.6008717,17z/data=!4m7!3m6!1s0x8e44299fe4e58951:0x62f7d7378db945cf!8m2!3d6.2489343!4d-75.5982505!15sCiBJR0xFU0lBIExBIENPTlNPTEFUQSBERSBNRURFTExJTloiIiBpZ2xlc2lhIGxhIGNvbnNvbGF0YSBkZSBtZWRlbGxpbpIBD2NhdGhvbGljX2NodXJjaJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSMk1VMDJhMkpCRUFF4AEA-gEECHUQSg!16s%2Fg%2F1tftx_ry?authuser=0&entry=tts&g_ep=EgoyMDI2MDgxNi4wIPu8ASoASAFQAw%3D%3D&skid=1014418a-e51b-4d3b-ac9d-5b60bb6ba4dc">Cómo llegar</a>
+      </div>
+
+            <div  class="information-bloque">
+        <img data-aos="fade-up" src="./img-editables/relicario.png" alt="">
+        <h3 data-aos="fade-up">Recepción</h3>
+        <p data-aos="fade-up">01:30 PM el Al Patio Beef and Bar</p>
+        <a  data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/dir//Al+Patio+Beef+%26+Bar,+Carrera+38,+Av.+Las+Palmas+%2319+-265+KM+2,+Medell%C3%ADn,+Antioquia,+Colombia/@6.2234405,-75.5678545,836m/data=!3m1!1e3!4m17!1m7!3m6!1s0x8e442830253fabc9:0xf0c558309687a45!2sAl+Patio+Beef+%26+Bar!8m2!3d6.2234352!4d-75.5652796!16s%2Fg%2F11cmz232b4!4m8!1m0!1m5!1m1!1s0x8e442830253fabc9:0xf0c558309687a45!2m2!1d-75.5652796!2d6.2234352!3e0?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D">Cómo llegar</a>
+      </div>
+
+    </div>
+  </main>
+  <div data-aos="fade-in" class="fotos">
+    <img src="./img-editables/1.png" alt="">
+  </div>
+
+
+
+
+  <div class="timeline">
+
+
+    <div class="iconos">
+        <div  class="iconos-block">
+            <img data-aos="fade-up"  src="./figuras/tulugar.png" alt="icono">
+            <p class="horario" data-aos="fade-up" > 10:45 am</p>
+            <p data-aos="fade-up" >Bienvenida</p>
+        </div>
+        <div   class="iconos-block">
+            <img data-aos="fade-up"  src="./figuras/anillos.png" alt="icono">
+            <p class="horario" data-aos="fade-up" >11:00 am</p>
+            <p data-aos="fade-up" >Ceremonia</p>
+        </div>
+        <div  class="iconos-block">
+            <img data-aos="fade-up"  src="./figuras/copas.png" alt="icono">
+            <p class="horario" data-aos="fade-up">13:30 pm</p>
+            <p data-aos="fade-up">Coctail</p>
+        </div>
+   
+         <div  class="iconos-block">
+            <img data-aos="fade-up"   src="./figuras/vueltaacasa.png" alt="icono">
+            <p class="horario" data-aos="fade-up"  >07:00 pm</p>
+            <p data-aos="fade-up"  >Vuelta a casa</p>
+        </div>
+    </div>
+</div>
+
+
+  <div  data-aos="fade-in" class="fotos">
+    <img src="./img-editables/3.png" alt="">
+  </div>
+
+<main>
+
+  <div class="information">
+    <div   class="information-bloque">
+    <img data-aos="fade-up" src="./figuras/instagram.png" alt="">
+    <h3 data-aos="fade-up" >Recuerdos</h3>
+    <p data-aos="fade-up">No nos queremos perder de nada, compartí tus fotos y videos de la fiesta en el siguiente álbum.</p>
+    <a class="boton" target="_blank" href="">Nuestro álbum</a>
+  </div>
+
+    <div class="information">
+    <div   class="information-bloque">
+    <img data-aos="fade-up" src="./figuras/spotify.png" alt="">
+    <h3 data-aos="fade-up" >Importante </h3>
+    <p data-aos="fade-up">Aunque nos
+encantan los pequeños de la familia, nuestro gran día será una celebración solo para
+adultos. Sin embargo, si tienes un bebé de meses y necesitas traerlo contigo, ¡por supuesto
+que será bienvenido!.</p>
+  </div>
+
+
+</div>
+</main>
+
+<div data-aos="fade-in"  class="fotos">
+  <img src="./img-editables/2.png" alt="">
+</div>
+<main>
+  <div class="information">
+  <div  class="information-bloque">
+    <h3 data-aos="fade-up" >Dress code </h3>
+    <p data-aos="fade-up" >Queremos que todos luzcan increíbles. Las mujeres de vestido largo elegante y los
+hombres con blazer, camisa y pantalón de vestir (olvídense de la corbata). Te invitamos a
+inspirarte en los tonos de nuestra paleta. Adjuntamos la paleta de colores.</p>
+  </div>
+
+
+</div>
+</main>
+<div  class="information rsvp">
+
+  <div class="forms">
+
+ <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwcVnAXu0x6eDZ5nyBd2Cw67IKv0enA7u3YUlkGAf3leu8-X0GkuVKxJ4V48yGyveww/exec" class="formulario">
+
+  <label data-aos="fade-up" class="formtitle">¿Venís?</label>
+  <div class="radio-group">
+    <label class="radio-option">
+      <input type="radio" name="ASISTENCIA" value="sí" required />
+      <span>Sí</span>
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="ASISTENCIA" value="no" />
+      <span>No</span>
+    </label>
+  </div>
+
+  <input type="text" name="NOMBRE" placeholder="Nombre" required />
+  <input type="text" name="APELLIDO" placeholder="Apellido" required />
+
+  <select name="DIETA" required>
+    <option value="" disabled selected>Dieta</option>
+    <option value="CHULETON">Chuletón con pure de papa y ensalada de la casa.</option>
+    <option value="POLLO">Pollo en mostaza y limón con pure de papa y ensalada de la casa.</option>
+    
+  </select>
+
+  <textarea name="MENSAJE" placeholder="Dejale un mensaje a los novios 🤍"></textarea>
+    <textarea name="CANCION" placeholder="Recomendale una canción al dj 🎶"></textarea>
+
+  <button type="submit" class="boton">Enviar</button>
+</form>
+
+    <p data-aos="fade-up">Recordá completar un formulario por persona. <br> Hacelo antes del domingo 04 Octubre.</p>
+  </div>
+</div>
+<main>
+
+
+  <div  class="information-bloque">
+    <br>
+    <img  data-aos="fade-up"  src="./figuras/giftcard.png" alt="">
+    <h3  data-aos="fade-up" >Mesa de regalos</h3>
+    <p  data-aos="fade-up" >El mejor regalo es que estés con nosotros <br>
+Pero si querés ayudarnos con nuestra soñada luna de miel...
+</p>
+    <div class="botones">
+      <a  data-aos="fade-in"  class="boton" onclick="copyToClipboard('')" >Alias pesos</a>
+      <a  data-aos="fade-in"  class="boton" onclick="copyToClipboard('')">Alias dólares</a>
+
+    </div>
+     <p  data-aos="fade-up" >Hace clic para copiar los datos. <br> Titular: xxxxxxxxxx</p>
+  </div>
+
+</div>
+</main>
+<div   class="fotos">
+  <img data-aos="fade-up" src="./img-editables/5.png" alt="">
+</div>
+
+</div>
+<div class="audiodiv">
+
+  <audio id="myAudio" preload="auto">
+  <source src="abc.mp3" type="audio/mpeg">
+</audio>
+  <div id="playPauseBtn" class="play">
+      <img src="./figuras/notamusical.png" alt="Icono de música">
+  </div>
+</div>
+    <footer>
+        <div class="contenido">
+         <div>
+           <img src="./figuras/logosiquiero.png" alt="icono si quiero">
+             <p>Hecho con &hearts; <br>
+             &#169 <b>Si,quiero!</b> - invitaciones inteligentes.
+             <br> Todos los derechos reservados.</p>
+         </div>
+
+         <div class="contenido-list">
+             <ul>
+                 <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+                 <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+                 <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+               </ul>
+         </div>
+        </div>
+
+     </footer>
+           <script src="form.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("myAudio");
+    const intentarPlay = () => {
+        audio.play().catch(e => {
+            console.warn("El navegador bloqueó la reproducción automática", e);
+        });
+        // saca todos los listeners para que se ejecute una sola vez
+        document.removeEventListener("scroll", intentarPlay);
+        document.removeEventListener("touchstart", intentarPlay);
+        document.removeEventListener("click", intentarPlay);
+        document.removeEventListener("keydown", intentarPlay);
+    };
+    document.addEventListener("scroll", intentarPlay, { passive: true });
+    document.addEventListener("touchstart", intentarPlay, { passive: true });
+    document.addEventListener("click", intentarPlay);
+    document.addEventListener("keydown", intentarPlay);
+});
+</script>
+      <script src="script.js"></script>
+      <script src="reproductor.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+
+    function copyToClipboard(text) {
+       const tempInput = document.createElement("input");
+       document.body.appendChild(tempInput);
+       tempInput.value = text;
+       tempInput.select();
+       document.execCommand("copy");
+       document.body.removeChild(tempInput);
+       alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
+     }
+   </script>
+<script>
+    // Espera a que se cargue el DOM
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollToTopBtn = document.querySelector("#scroll-to-top");
+
+      scrollToTopBtn.addEventListener("click", () => {
+        // Comprueba la compatibilidad con "scroll-behavior"
+        if ("scrollBehavior" in document.documentElement.style) {
+          // Usa el desplazamiento suave del navegador
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        } else {
+          // Desplazamiento suave de respaldo para navegadores antiguos
+          scrollToTop(0, 600);
+        }
+      });
+
+      // Función de desplazamiento suave de respaldo para navegadores antiguos
+      function scrollToTop(to, duration) {
+        const start = window.scrollY || document.documentElement.scrollTop;
+        const change = to - start;
+        const increment = 20;
+        let currentTime = 0;
+
+        const animateScroll = function () {
+          currentTime += increment;
+          const val = Math.easeInOutQuad(currentTime, start, change, duration);
+          window.scrollTo(0, val);
+          if (currentTime < duration) {
+            requestAnimationFrame(animateScroll);
+          }
+        };
+
+        Math.easeInOutQuad = function (t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        };
+
+        requestAnimationFrame(animateScroll);
+      }
+    });
+  </script>
+</body>
+</html>
