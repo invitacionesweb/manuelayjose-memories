@@ -156,34 +156,80 @@ inspirarte en los tonos de nuestra paleta.</p>
 
   <div class="forms">
 
- <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwcVnAXu0x6eDZ5nyBd2Cw67IKv0enA7u3YUlkGAf3leu8-X0GkuVKxJ4V48yGyveww/exec" class="formulario">
+<div class="forms">
 
-  <label data-aos="fade-up" class="formtitle">Vienes?</label>
-  <div class="radio-group">
-    <label class="radio-option">
-      <input type="radio" name="ASISTENCIA" value="sí" required />
-      <span>Sí</span>
-    </label>
-    <label class="radio-option">
-      <input type="radio" name="ASISTENCIA" value="no" />
-      <span>No</span>
-    </label>
-  </div>
+    <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwgBnWsJ-2VCFMcM0Vx88NUh9jg0A-fMdQEIDmVo_vTUeucSg6BcRiReejZBNCMukzf/exec" class="formulario" id="asistenciaForm">
 
-  <input type="text" name="NOMBRE" placeholder="Nombre" required />
-  <input type="text" name="APELLIDO" placeholder="Apellido" required />
+        <label class="formtitle">¿Vienes?</label>
 
-  <select name="DIETA" required>
-    <option value="" disabled selected>Dieta</option>
-    <option value="CHULETON">Chuletón de cerdo con pure de papa y ensalada de la casa.</option>
-    <option value="POLLO">Pollo en mostaza y limón con pure de papa y ensalada de la casa.</option>
-    
-  </select>
+        <select name="NUMERO_PERSONAS" id="numeroPersonas" required>
+            <option value="" disabled selected>¿Cuántas personas van a confirmar?</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
 
-  <textarea name="MENSAJE" placeholder="Dejale un mensaje a los novios 🤍"></textarea>
+        <div id="invitadosContainer"></div>
 
-  <button type="submit" class="boton">Enviar</button>
-</form>
+        <button type="submit" class="boton">Enviar</button>
+    </form>
+
+    <script>
+    (function () {
+      var select = document.getElementById('numeroPersonas');
+      var container = document.getElementById('invitadosContainer');
+
+      function bloqueInvitado(n) {
+        var esPrimero = n === 1;
+        var titulo = esPrimero ? '' : '<label class="invitado-titulo">Invitado n.º ' + n + '</label>';
+
+        return ''
+          + '<div class="invitado-bloque" data-invitado="' + n + '">'
+          + titulo
+          + '<input type="text" name="NOMBRE_' + n + '" placeholder="Nombre" required />'
+          + '<input type="text" name="APELLIDO_' + n + '" placeholder="Apellido" required />'
+          + '<select name="ASISTENCIA_' + n + '" required>'
+          +   '<option value="" disabled selected>Asistís?</option>'
+          +   '<option value="Sí">Sí</option>'
+          +   '<option value="No">No</option>'
+          +   '<option value="Aún no lo decido">Aún no lo decido</option>'
+          + '</select>'
+          + '<select name="DIETA_' + n + '" required>'
+          +   '<option value="" disabled selected>Dieta</option>'
+          +   '<option value="CHULETON">Chuletón de cerdo con pure de papa y ensalada de la casa.</option>'
+          +   '<option value="POLLO">Pollo en mostaza y limón con pure de papa y ensalada de la casa.</option>'
+          + '</select>'
+          + '<textarea name="MENSAJE_' + n + '" placeholder="Dejale un mensaje a los novios 🤍"></textarea>'
+          + '</div>';
+      }
+
+      function render(cantidad) {
+        // Antes de redibujar, guarda lo que la persona ya haya completado
+        var guardados = {};
+        container.querySelectorAll('input, select, textarea').forEach(function (el) {
+          if (el.name) guardados[el.name] = el.value;
+        });
+
+        var html = '';
+        for (var i = 1; i <= cantidad; i++) html += bloqueInvitado(i);
+        container.innerHTML = html;
+
+        // Restaura los valores que ya estaban cargados
+        container.querySelectorAll('input, select, textarea').forEach(function (el) {
+          if (el.name && guardados[el.name] !== undefined) el.value = guardados[el.name];
+        });
+      }
+
+      select.addEventListener('change', function () {
+        render(parseInt(select.value, 10));
+      });
+
+      render(1); // el invitado 1 está siempre presente (mínimo 1 persona)
+    })();
+    </script>
+</div>
 
     <p data-aos="fade-up">Recuerda completar un formulario por persona. <br> Hazlo antes del domingo 04 Octubre.</p>
   </div>

@@ -1,4 +1,5 @@
-const scriptUrl = 'https://script.google.com/macros/s/AKfycbwcVnAXu0x6eDZ5nyBd2Cw67IKv0enA7u3YUlkGAf3leu8-X0GkuVKxJ4V48yGyveww/exec';
+
+const scriptUrl = 'https://script.google.com/macros/s/AKfycbzeVU1sLyiBEtsd1nIeWOWvRGhF0PYP0jcF6yhpRlhdAEjiqvpZG-M9hMU07tP5Oww/exec';
 const form = document.forms['asistenciaform'];
 
 form.addEventListener('submit', e => {
@@ -8,27 +9,16 @@ form.addEventListener('submit', e => {
     title: 'Enviando...',
     text: 'Por favor, esperá un momento',
     allowOutsideClick: false,
-    allowEscapeKey: false,
-    didOpen: () => {
-      Swal.showLoading();
-    }
+    didOpen: () => Swal.showLoading()
   });
 
   fetch(scriptUrl, { method: 'POST', body: new FormData(form) })
-    .then(response => {
-      Swal.fire({
-        title: "¡MUCHAS GRACIAS!",
-        text: "Formulario Enviado",
-        icon: "success"
-      });
+    .then(res => {
+      if (!res.ok) throw new Error('Error de red');
+      Swal.fire('¡MUCHAS GRACIAS!', 'Formulario enviado', 'success');
     })
-    .then(() => {
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500); // da tiempo a leer el mensaje
-    })
-    .catch(error => {
-      Swal.fire("Error", "No se pudo enviar el formulario. Intentá de nuevo.", "error");
-      console.error('Error', error.message);
-    });
+    .then(() => setTimeout(() => location.reload(), 1500))
+    .catch(() =>
+      Swal.fire('Error', 'No se pudo enviar el formulario', 'error')
+    );
 });

@@ -240,30 +240,33 @@ main img {
     color: var(--color-secundario);
 }
 
+
+
 /*FORMS*/
 .forms {
-    background-color: var(--color-secundario);
+   
     text-align: center;
-    padding: 40px 0 40px 0;
+    padding: 40px 0 20px 0;
+    background-image: url(./img-editable/textura3.png);
+   padding:30px 0 30px 0;
+    background-size: cover;
+    background-position: center;
+
+    background-repeat: no-repeat;
+
 }
 
-.forms h2 {
-    text-align: center;
-    font-weight: 100;
-    font-size: 1.4em;
-    padding: 10px 0 0 0;
-    margin: 0;
-    color: var(--color-principal);
-}
+
 .forms p {
-    font-size: 1em;
+    font-size: 1.2rem;
     padding: 10px 0 20px 0;
     margin: 0;
+    font-family: var(--font-principal);
     color: var(--color-principal);
 }
 .information-bloque .botones {
     width: 140px;
-    height: auto;
+    height: 110px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -275,32 +278,59 @@ main img {
     width: 100px;
 }
 label .grupo-opciones {
-    font-family: var(--font-secundaria);
-    color: var(--color-principal);
+    font-family: var(--font-principal);
+   
+}
+.formulario select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: 'Inter', sans-serif;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23a3a49d' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px 8px;
+  padding-right: 2.2rem;
 }
 .formulario {
+     color: var(--color-3);
     max-width: 500px;
   width: 90vw;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 10PX;
 }
+
+.invitado-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.invitado-titulo {
+    font-family: var(--font-principal);
+    padding: 30px 0 10px 0;
+    font-size: 1.2rem;
+}
+
 .formulario .formtitle {
     font-family: var(--font-principal);
-    color: var(--color-principal);
-    font-size: 1.4em;
-    padding: 0;
+    color: var(--color-3);
+ font-size: 2.6rem;
+     padding: 0;
     margin: 0;
 }
 
 .radio-group {
   display: flex;
+   font-family: var(--font-principal);
   align-items: center;
   padding: 0 25%;
   justify-content: start;
   gap: 100px;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .grupo-opciones{
@@ -317,23 +347,19 @@ label .grupo-opciones {
   display: flex;
   width: 10px;
   align-items: center;
-  font-family: var(--font-secundaria); /* Cambiá esto por el nombre real de tu fuente secundaria */
+  font-family: var(--font-principal); /* CambiÃ¡ esto por el nombre real de tu fuente secundaria */
   color: var(--color-principal); /* Este es tu color principal, definilo antes o reemplazalo por un valor hex como #A3A87B */
   font-size: 1em;
   gap: 6px;
 }
 
 .radio-option input[type="radio"] {
-  accent-color: var(--color-terciario); /* Cambia el color del círculo si el navegador lo soporta */
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  cursor: pointer;
+  accent-color: var(--color-terciario); /* Cambia el color del cÃ­rculo si el navegador lo soporta */
 }
 .etiqueta {
-    font-family: var(--font-secundaria);
+   font-family: var(--font-principal);
     padding: 0;
+    
     margin: 0;
 }
 .formulario {
@@ -346,24 +372,39 @@ label .grupo-opciones {
 .formulario textarea {
   background-color: var(--color-principal);
   border: none;
-  border-radius: 12px;
+font-family: 'Inter', sans-serif;
   padding: 0.8rem;
   font-size: 1rem;
   color: #a3a49d;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   box-sizing: border-box;
 }
 
 .formulario input::placeholder,
-.formulario textarea::placeholder {
-  color: var(--gris-placeholder);
+.formulario textarea::placeholder,
+.formulario select {
+  font-family: 'Inter', sans-serif;
 }
 
+.formulario textarea::placeholder {
+   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
 .formulario input:focus,
 .formulario select:focus,
 .formulario textarea:focus {
-  outline: none;
-  border: 2px solid var(--color-terciario);
+    outline: 2px solid var(--color-secundario);
+}
+
+.formulario input[type="radio"] {
+    accent-color: var(--color-1);
+}
+
+.formulario input:focus::placeholder,
+.formulario textarea:focus::placeholder {
+    color:#a3a49d;;
+   
 }
 
 .formulario textarea {
@@ -371,9 +412,11 @@ label .grupo-opciones {
   min-height: 80px;
 }
 .forms .boton {
-    font-size: 1em;
+    font-size: 1.4rem;
+    margin: auto;
+    width: 90%;
+    font-family: var(--font-principal);
 }
-
 
 /*INFO X BLOQUES*/
 .information {
