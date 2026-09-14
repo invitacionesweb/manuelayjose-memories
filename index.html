@@ -129,7 +129,7 @@ Consolata.</p>
     <p data-aos="fade-up">Aunque nos
 encantan los pequeños de la familia, nuestro gran día será una celebración solo para
 adultos. Sin embargo, si tienes un bebé de meses y necesitas traerlo contigo, ¡por supuesto
-que será bienvenido!.</p>
+que será bienvenido!</p>
   </div>
 
 
@@ -184,31 +184,32 @@ inspirarte en los tonos de nuestra paleta.</p>
       var container = document.getElementById('invitadosContainer');
 
       function bloqueInvitado(n) {
-        var esPrimero = n === 1;
-        var titulo = esPrimero ? '' : '<label class="invitado-titulo">Invitado n.º ' + n + '</label>';
+  var esPrimero = n === 1;
+  var titulo = esPrimero ? '' : '<label class="invitado-titulo">Invitado n.º ' + n + '</label>';
+  var mensaje = esPrimero
+    ? '<textarea name="MENSAJE_1" placeholder="Dejale un mensaje a los novios 🤍"></textarea>'
+    : '';
 
-        return ''
-          + '<div class="invitado-bloque" data-invitado="' + n + '">'
-          + titulo
-          + '<input type="text" name="NOMBRE_' + n + '" placeholder="Nombre" required />'
-          + '<input type="text" name="APELLIDO_' + n + '" placeholder="Apellido" required />'
-          + '<select name="ASISTENCIA_' + n + '" required>'
-          +   '<option value="" disabled selected>Asistís?</option>'
-          +   '<option value="Sí">Sí</option>'
-          +   '<option value="No">No</option>'
-          +   '<option value="Aún no lo decido">Aún no lo decido</option>'
-          + '</select>'
-          + '<select name="DIETA_' + n + '" required>'
-          +   '<option value="" disabled selected>Dieta</option>'
-          +   '<option value="CHULETON">Chuletón de cerdo con pure de papa y ensalada de la casa.</option>'
-          +   '<option value="POLLO">Pollo en mostaza y limón con pure de papa y ensalada de la casa.</option>'
-          + '</select>'
-          + '<textarea name="MENSAJE_' + n + '" placeholder="Dejale un mensaje a los novios 🤍"></textarea>'
-          + '</div>';
-      }
-
+  return ''
+    + '<div class="invitado-bloque" data-invitado="' + n + '">'
+    + titulo
+    + '<input type="text" name="NOMBRE_' + n + '" placeholder="Nombre" required />'
+    + '<input type="text" name="APELLIDO_' + n + '" placeholder="Apellido" required />'
+    + '<select name="ASISTENCIA_' + n + '" required>'
+    +   '<option value="" disabled selected>Asistís?</option>'
+    +   '<option value="Sí">Sí</option>'
+    +   '<option value="No">No</option>'
+    +   '<option value="Aún no lo decido">Aún no lo decido</option>'
+    + '</select>'
+    + '<select name="DIETA_' + n + '" required>'
+    +   '<option value="" disabled selected>Dieta</option>'
+    +   '<option value="CHULETON">Chuletón de cerdo con pure de papa y ensalada de la casa.</option>'
+    +   '<option value="POLLO">Pollo en mostaza y limón con pure de papa y ensalada de la casa.</option>'
+    + '</select>'
+    + mensaje
+    + '</div>';
+}
       function render(cantidad) {
-        // Antes de redibujar, guarda lo que la persona ya haya completado
         var guardados = {};
         container.querySelectorAll('input, select, textarea').forEach(function (el) {
           if (el.name) guardados[el.name] = el.value;
@@ -218,7 +219,6 @@ inspirarte en los tonos de nuestra paleta.</p>
         for (var i = 1; i <= cantidad; i++) html += bloqueInvitado(i);
         container.innerHTML = html;
 
-        // Restaura los valores que ya estaban cargados
         container.querySelectorAll('input, select, textarea').forEach(function (el) {
           if (el.name && guardados[el.name] !== undefined) el.value = guardados[el.name];
         });
@@ -228,12 +228,10 @@ inspirarte en los tonos de nuestra paleta.</p>
         render(parseInt(select.value, 10));
       });
 
-      render(1); // el invitado 1 está siempre presente (mínimo 1 persona)
+      render(1);
     })();
     </script>
 </div>
-
- 
 </div>
 
 
