@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,16 +6,18 @@
     <title>MANU Y JOSE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" />
-
+    <!-- Bootstrap Icons solo se usa en el footer (fuera de la primera pantalla),
+         así que se carga sin bloquear el render inicial -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css"
+          integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous"
+          media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    </noscript>
 </head>
 <body>
     <header>
@@ -46,204 +48,187 @@
     </div>
 <!--
       <H2 id="mensaje" class="mensaje-final title" style="display: none;">LLEGÓ EL DÍA</H2>
-
 -->
 
   <main>
     <h3 class="quote" data-aos="fade-up" >La suerte de coincidir, <br> la magia de conectar, <br> la paz de poder ser.</h3><br>
-    <img  data-aos="fade-up"  class="fecha" src="./img-editables/fecha.png" alt="">
+    <img data-aos="fade-up" class="fecha" src="./img-editables/fecha.png" alt="Fecha del casamiento">
     <div class="information">
 
-
-      <div  class="information-bloque">
-        <img data-aos="fade-up" src="./img-editables/relicario.png" alt="">
+      <div class="information-bloque">
+        <img loading="lazy" data-aos="fade-up" src="./img-editables/relicario.png" alt="">
         <h3 data-aos="fade-up">Ceremonia</h3>
         <p data-aos="fade-up">10:00 AM - Iglesia Nuestra Señora de la
 Consolata.</p>
-        <a  data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/dir//Parroquia+Nuestra+Se%C3%B1ora+de+la+Consolata,+Medellin,+Cra+79A+%2342+42,+Laureles+-+Estadio,+Medell%C3%ADn,+Laureles,+Medell%C3%ADn,+Antioquia,+Colombia/@6.2489343,-75.6008254,870m/data=!3m1!1e3!4m17!1m7!3m6!1s0x8e44299fe4e58951:0x62f7d7378db945cf!2sParroquia+Nuestra+Se%C3%B1ora+de+la+Consolata,+Medellin!8m2!3d6.2489343!4d-75.5982505!16s%2Fg%2F1tftx_ry!4m8!1m0!1m5!1m1!1s0x8e44299fe4e58951:0x62f7d7378db945cf!2m2!1d-75.5983769!2d6.2489515!3e0?entry=ttu&g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D">Cómo llegar</a>
+        <a  data-aos="fade-up" class="boton" target="_blank" rel="noopener" href="https://www.google.com/maps/dir//Parroquia+Nuestra+Se%C3%B1ora+de+la+Consolata,+Medellin,+Cra+79A+%2342+42,+Laureles+-+Estadio,+Medell%C3%ADn,+Laureles,+Medell%C3%ADn,+Antioquia,+Colombia/@6.2489343,-75.6008254,870m/data=!3m1!1e3!4m17!1m7!3m6!1s0x8e44299fe4e58951:0x62f7d7378db945cf!2sParroquia+Nuestra+Se%C3%B1ora+de+la+Consolata,+Medellin!8m2!3d6.2489343!4d-75.5982505!16s%2Fg%2F1tftx_ry!4m8!1m0!1m5!1m1!1s0x8e44299fe4e58951:0x62f7d7378db945cf!2m2!1d-75.5983769!2d6.2489515!3e0?entry=ttu&g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D">Cómo llegar</a>
       </div>
 
-            <div  class="information-bloque">
-        <img data-aos="fade-up" src="./img-editables/relicario.png" alt="">
+      <div class="information-bloque">
+        <img loading="lazy" data-aos="fade-up" src="./img-editables/relicario.png" alt="">
         <h3 data-aos="fade-up">Recepción</h3>
         <p data-aos="fade-up">01:30 PM el Al Patio</p>
-        <a  data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/dir//Al+Patio+Beef+%26+Bar,+Carrera+38,+Av.+Las+Palmas+%2319+-265+KM+2,+Medell%C3%ADn,+Antioquia,+Colombia/@6.2234405,-75.5678545,836m/data=!3m1!1e3!4m17!1m7!3m6!1s0x8e442830253fabc9:0xf0c558309687a45!2sAl+Patio+Beef+%26+Bar!8m2!3d6.2234352!4d-75.5652796!16s%2Fg%2F11cmz232b4!4m8!1m0!1m5!1m1!1s0x8e442830253fabc9:0xf0c558309687a45!2m2!1d-75.5652796!2d6.2234352!3e0?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D">Cómo llegar</a>
+        <a  data-aos="fade-up" class="boton" target="_blank" rel="noopener" href="https://www.google.com/maps/dir//Al+Patio+Beef+%26+Bar,+Carrera+38,+Av.+Las+Palmas+%2319+-265+KM+2,+Medell%C3%ADn,+Antioquia,+Colombia/@6.2234405,-75.5678545,836m/data=!3m1!1e3!4m17!1m7!3m6!1s0x8e442830253fabc9:0xf0c558309687a45!2sAl+Patio+Beef+%26+Bar!8m2!3d6.2234352!4d-75.5652796!16s%2Fg%2F11cmz232b4!4m8!1m0!1m5!1m1!1s0x8e442830253fabc9:0xf0c558309687a45!2m2!1d-75.5652796!2d6.2234352!3e0?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D">Cómo llegar</a>
       </div>
 
     </div>
   </main>
+
   <div data-aos="fade-in" class="fotos">
-    <img src="./img-editables/1.png" alt="">
+    <img loading="lazy" src="./img-editables/1.png" alt="">
   </div>
 
-
-
-
   <div class="timeline">
-
-
     <div class="iconos">
-        <div  class="iconos-block">
-            <img data-aos="fade-up"  src="./figuras/tulugar.png" alt="icono">
-            <p class="horario" data-aos="fade-up" > 09:30 am</p>
-            <p data-aos="fade-up" >Bienvenida</p>
+        <div class="iconos-block">
+            <img loading="lazy" data-aos="fade-up" src="./figuras/tulugar.png" alt="icono">
+            <p class="horario" data-aos="fade-up"> 09:30 am</p>
+            <p data-aos="fade-up">Bienvenida</p>
         </div>
-        <div   class="iconos-block">
-            <img data-aos="fade-up"  src="./figuras/anillos.png" alt="icono">
-            <p class="horario" data-aos="fade-up" >10:00 am</p>
-            <p data-aos="fade-up" >Ceremonia</p>
+        <div class="iconos-block">
+            <img loading="lazy" data-aos="fade-up" src="./figuras/anillos.png" alt="icono">
+            <p class="horario" data-aos="fade-up">10:00 am</p>
+            <p data-aos="fade-up">Ceremonia</p>
         </div>
-        <div  class="iconos-block">
-            <img data-aos="fade-up"  src="./figuras/copas.png" alt="icono">
+        <div class="iconos-block">
+            <img loading="lazy" data-aos="fade-up" src="./figuras/copas.png" alt="icono">
             <p class="horario" data-aos="fade-up">01:30 pm</p>
             <p data-aos="fade-up">Recepción</p>
         </div>
-   
-         <div  class="iconos-block">
-            <img data-aos="fade-up"   src="./figuras/fiesta.png" alt="icono">
-            <p class="horario" data-aos="fade-up"  >05:00 pm a 07:00 pm</p>
-            <p data-aos="fade-up"  >Coctail</p>
+        <div class="iconos-block">
+            <img loading="lazy" data-aos="fade-up" src="./figuras/fiesta.png" alt="icono">
+            <p class="horario" data-aos="fade-up">05:00 pm a 07:00 pm</p>
+            <p data-aos="fade-up">Coctail</p>
         </div>
     </div>
-</div>
-
-
-  <div  data-aos="fade-in" class="fotos">
-    <img src="./img-editables/2.png" alt="">
   </div>
 
-<main>
-
-  <div class="information">
-    <div   class="information-bloque">
-    <img data-aos="fade-up" src="./figuras/instagram.png" alt="">
-    <h3 data-aos="fade-up" >Recuerdos</h3>
-    <p data-aos="fade-up">No nos queremos perder de nada, compartí tus fotos y videos de la fiesta en el siguiente álbum.</p>
-    <a class="boton" target="_blank" href="">Nuestro álbum</a>
+  <div data-aos="fade-in" class="fotos">
+    <img loading="lazy" src="./img-editables/2.png" alt="">
   </div>
 
+  <main>
     <div class="information">
-    <div   class="information-bloque">
-    <img data-aos="fade-up" src="./figuras/spotify.png" alt="">
-    <h3 data-aos="fade-up" >Importante </h3>
-    <p data-aos="fade-up">Aunque nos
+      <div class="information-bloque">
+        <img loading="lazy" data-aos="fade-up" src="./figuras/instagram.png" alt="">
+        <h3 data-aos="fade-up">Recuerdos</h3>
+        <p data-aos="fade-up">No nos queremos perder de nada, compartí tus fotos y videos de la fiesta en el siguiente álbum.</p>
+        <a class="boton" target="_blank" rel="noopener" href="">Nuestro álbum</a>
+      </div>
+
+      <div class="information-bloque">
+        <img loading="lazy" data-aos="fade-up" src="./figuras/spotify.png" alt="">
+        <h3 data-aos="fade-up">Importante</h3>
+        <p data-aos="fade-up">Aunque nos
 encantan los pequeños de la familia, nuestro gran día será una celebración solo para
 adultos. Sin embargo, si tienes un bebé de meses y necesitas traerlo contigo, ¡por supuesto
 que será bienvenido!</p>
+      </div>
+    </div>
+  </main>
+
+  <div data-aos="fade-in" class="fotos">
+    <img loading="lazy" src="./img-editables/3.png" alt="">
   </div>
 
-
-</div>
-</main>
-
-<div data-aos="fade-in"  class="fotos">
-  <img src="./img-editables/3.png" alt="">
-</div>
-<main>
-  <div class="information">
-  <div  class="information-bloque">
-    <h3 data-aos="fade-up" >Dress code </h3>
-    <p data-aos="fade-up" >Queremos que todos luzcan increíbles. Las mujeres de vestido largo elegante y los
+  <main>
+    <div class="information">
+      <div class="information-bloque">
+        <h3 data-aos="fade-up">Dress code </h3>
+        <p data-aos="fade-up">Queremos que todos luzcan increíbles. Las mujeres de vestido largo elegante y los
 hombres con blazer, camisa y pantalón de vestir (olvídense de la corbata). Te invitamos a
 inspirarte en los tonos de nuestra paleta.</p>
-<a class="boton" href="">Pinterest</a>
+        <a class="boton" target="_blank" rel="noopener" href="">Pinterest</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="information rsvp">
+
+    <div class="forms">
+
+        <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbzeVU1sLyiBEtsd1nIeWOWvRGhF0PYP0jcF6yhpRlhdAEjiqvpZG-M9hMU07tP5Oww/exec" class="formulario" id="asistenciaForm">
+
+            <label class="formtitle">¿Vienes?</label>
+            <p>No olvides completar el formulario antes del 20 de Octubre</p>
+            <select name="NUMERO_PERSONAS" id="numeroPersonas" required>
+                <option value="" disabled selected>¿Cuántas personas van a confirmar?</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <div id="invitadosContainer"></div>
+
+            <button type="submit" class="boton">Enviar</button>
+        </form>
+
+        <script>
+        (function () {
+          var select = document.getElementById('numeroPersonas');
+          var container = document.getElementById('invitadosContainer');
+
+          function bloqueInvitado(n) {
+            var esPrimero = n === 1;
+            var titulo = esPrimero ? '' : '<label class="invitado-titulo">Invitado n.º ' + n + '</label>';
+            var mensaje = esPrimero
+              ? '<textarea name="MENSAJE_1" placeholder="Dejale un mensaje a los novios 🤍"></textarea>'
+              : '';
+
+            return ''
+              + '<div class="invitado-bloque" data-invitado="' + n + '">'
+              + titulo
+              + '<input type="text" name="NOMBRE_' + n + '" placeholder="Nombre" required />'
+              + '<input type="text" name="APELLIDO_' + n + '" placeholder="Apellido" required />'
+              + '<select name="ASISTENCIA_' + n + '" required>'
+              +   '<option value="" disabled selected>Asistís?</option>'
+              +   '<option value="Sí">Sí</option>'
+              +   '<option value="No">No</option>'
+              +   '<option value="Aún no lo decido">Aún no lo decido</option>'
+              + '</select>'
+              + '<select name="DIETA_' + n + '" required>'
+              +   '<option value="" disabled selected>Dieta</option>'
+              +   '<option value="CHULETON">Chuletón de cerdo con pure de papa y ensalada de la casa.</option>'
+              +   '<option value="POLLO">Pollo en mostaza y limón con pure de papa y ensalada de la casa.</option>'
+              + '</select>'
+              + mensaje
+              + '</div>';
+          }
+
+          function render(cantidad) {
+            // Antes de redibujar, guarda lo que la persona ya haya completado
+            var guardados = {};
+            container.querySelectorAll('input, select, textarea').forEach(function (el) {
+              if (el.name) guardados[el.name] = el.value;
+            });
+
+            var html = '';
+            for (var i = 1; i <= cantidad; i++) html += bloqueInvitado(i);
+            container.innerHTML = html;
+
+            // Restaura los valores que ya estaban cargados
+            container.querySelectorAll('input, select, textarea').forEach(function (el) {
+              if (el.name && guardados[el.name] !== undefined) el.value = guardados[el.name];
+            });
+          }
+
+          select.addEventListener('change', function () {
+            render(parseInt(select.value, 10));
+          });
+
+          render(1); // el invitado 1 está siempre presente (mínimo 1 persona)
+        })();
+        </script>
+    </div>
   </div>
 
-
-</div>
-</main>
-
-
-<div  class="information rsvp">
-
-  
-
-<div class="forms">
-
-    <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbzeVU1sLyiBEtsd1nIeWOWvRGhF0PYP0jcF6yhpRlhdAEjiqvpZG-M9hMU07tP5Oww/exec" class="formulario" id="asistenciaForm">
-
-        <label class="formtitle">¿Vienes?</label>
-      <p>No olvides completar el formulario antes del 20 de Octubre</p>
-        <select name="NUMERO_PERSONAS" id="numeroPersonas" required>
-            <option value="" disabled selected>¿Cuántas personas van a confirmar?</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-
-        <div id="invitadosContainer"></div>
-
-        <button type="submit" class="boton">Enviar</button>
-    </form>
-
-    <script>
-    (function () {
-      var select = document.getElementById('numeroPersonas');
-      var container = document.getElementById('invitadosContainer');
-
-      function bloqueInvitado(n) {
-  var esPrimero = n === 1;
-  var titulo = esPrimero ? '' : '<label class="invitado-titulo">Invitado n.º ' + n + '</label>';
-  var mensaje = esPrimero
-    ? '<textarea name="MENSAJE_1" placeholder="Dejale un mensaje a los novios 🤍"></textarea>'
-    : '';
-
-  return ''
-    + '<div class="invitado-bloque" data-invitado="' + n + '">'
-    + titulo
-    + '<input type="text" name="NOMBRE_' + n + '" placeholder="Nombre" required />'
-    + '<input type="text" name="APELLIDO_' + n + '" placeholder="Apellido" required />'
-    + '<select name="ASISTENCIA_' + n + '" required>'
-    +   '<option value="" disabled selected>Asistís?</option>'
-    +   '<option value="Sí">Sí</option>'
-    +   '<option value="No">No</option>'
-    +   '<option value="Aún no lo decido">Aún no lo decido</option>'
-    + '</select>'
-    + '<select name="DIETA_' + n + '" required>'
-    +   '<option value="" disabled selected>Dieta</option>'
-    +   '<option value="CHULETON">Chuletón de cerdo con pure de papa y ensalada de la casa.</option>'
-    +   '<option value="POLLO">Pollo en mostaza y limón con pure de papa y ensalada de la casa.</option>'
-    + '</select>'
-    + mensaje
-    + '</div>';
-}
-      function render(cantidad) {
-        var guardados = {};
-        container.querySelectorAll('input, select, textarea').forEach(function (el) {
-          if (el.name) guardados[el.name] = el.value;
-        });
-
-        var html = '';
-        for (var i = 1; i <= cantidad; i++) html += bloqueInvitado(i);
-        container.innerHTML = html;
-
-        container.querySelectorAll('input, select, textarea').forEach(function (el) {
-          if (el.name && guardados[el.name] !== undefined) el.value = guardados[el.name];
-        });
-      }
-
-      select.addEventListener('change', function () {
-        render(parseInt(select.value, 10));
-      });
-
-      render(1);
-    })();
-    </script>
-</div>
-</div>
-
-
-
-<main>
-
-
-  <div  class="information-bloque">
-    <br>
-    <img  data-aos="fade-up"  src="./figuras/giftcard.png" alt="">
-    <h3  data-aos="fade-up" >Lluvia de sobres</h3>
-   <!--  <p  data-aos="fade-up" >El mejor regalo es que estés con nosotros <br>
+  <main>
+    <div class="information-bloque">
+      <br>
+      <img loading="lazy" data-aos="fade-up" src="./figuras/giftcard.png" alt="">
+      <h3 data-aos="fade-up">Lluvia de sobres</h3>
+     <!--  <p  data-aos="fade-up" >El mejor regalo es que estés con nosotros <br>
 Pero si querés ayudarnos con nuestra soñada luna de miel...
 </p>
 
@@ -254,128 +239,112 @@ Pero si querés ayudarnos con nuestra soñada luna de miel...
     </div>
      <p  data-aos="fade-up" >Hace clic para copiar los datos. <br> Titular: xxxxxxxxxx</p>
      -->
+    </div>
+  </main>
+
+  <div class="fotos">
+    <img loading="lazy" data-aos="fade-up" src="./img-editables/5.png" alt="">
   </div>
 
-</div>
-</main>
-<div   class="fotos">
-  <img data-aos="fade-up" src="./img-editables/5.png" alt="">
-</div>
-
-</div>
-<div class="audiodiv">
-
-  <audio id="myAudio" preload="auto">
-  <source src="abc.mp3" type="audio/mpeg">
-</audio>
-  <div id="playPauseBtn" class="play">
-      <img src="./figuras/notamusical.png" alt="Icono de música">
+  <div class="audiodiv">
+    <audio id="myAudio" preload="none">
+      <source src="abc.mp3" type="audio/mpeg">
+    </audio>
+    <div id="playPauseBtn" class="play">
+        <img src="./figuras/notamusical.png" alt="Icono de música">
+    </div>
   </div>
-</div>
-    <footer>
-        <div class="contenido">
-         <div>
-           <img src="./figuras/logosiquiero.png" alt="icono si quiero">
-             <p>Hecho con &hearts; <br>
-             &#169 <b>Si,quiero!</b> - invitaciones inteligentes.
-             <br> Todos los derechos reservados.</p>
-         </div>
 
-         <div class="contenido-list">
-             <ul>
-                 <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
-                 <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
-                 <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
-               </ul>
-         </div>
-        </div>
+  <footer>
+      <div class="contenido">
+       <div>
+         <img loading="lazy" src="./figuras/logosiquiero.png" alt="icono si quiero">
+           <p>Hecho con &hearts; <br>
+           &#169 <b>Si,quiero!</b> - invitaciones inteligentes.
+           <br> Todos los derechos reservados.</p>
+       </div>
 
-     </footer>
-           <script src="form.js"></script>
+       <div class="contenido-list">
+           <ul>
+               <li><a target="_blank" rel="noopener" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+               <li><a target="_blank" rel="noopener" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+               <li><a target="_blank" rel="noopener" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+             </ul>
+       </div>
+      </div>
+  </footer>
 
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const audio = document.getElementById("myAudio");
-    const intentarPlay = () => {
-        audio.play().catch(e => {
-            console.warn("El navegador bloqueó la reproducción automática", e);
-        });
-        // saca todos los listeners para que se ejecute una sola vez
-        document.removeEventListener("scroll", intentarPlay);
-        document.removeEventListener("touchstart", intentarPlay);
-        document.removeEventListener("click", intentarPlay);
-        document.removeEventListener("keydown", intentarPlay);
-    };
-    document.addEventListener("scroll", intentarPlay, { passive: true });
-    document.addEventListener("touchstart", intentarPlay, { passive: true });
-    document.addEventListener("click", intentarPlay);
-    document.addEventListener("keydown", intentarPlay);
-});
-</script>
-      <script src="script.js"></script>
-      <script src="reproductor.js"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <!-- SweetAlert2 se mueve acá abajo (antes estaba en el <head>, bloqueando el render inicial).
+       Va antes de form.js porque form.js lo necesita para mostrar los mensajes de envío. -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="form.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="reproductor.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
-    <script>
-
-    function copyToClipboard(text) {
-       const tempInput = document.createElement("input");
-       document.body.appendChild(tempInput);
-       tempInput.value = text;
-       tempInput.select();
-       document.execCommand("copy");
-       document.body.removeChild(tempInput);
-       alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
-     }
-   </script>
-<script>
-    // Espera a que se cargue el DOM
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollToTopBtn = document.querySelector("#scroll-to-top");
-
-      scrollToTopBtn.addEventListener("click", () => {
-        // Comprueba la compatibilidad con "scroll-behavior"
-        if ("scrollBehavior" in document.documentElement.style) {
-          // Usa el desplazamiento suave del navegador
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById("myAudio");
+      const intentarPlay = () => {
+          audio.play().catch(e => {
+              console.warn("El navegador bloqueó la reproducción automática", e);
           });
-        } else {
-          // Desplazamiento suave de respaldo para navegadores antiguos
-          scrollToTop(0, 600);
-        }
-      });
+          // saca todos los listeners para que se ejecute una sola vez
+          document.removeEventListener("scroll", intentarPlay);
+          document.removeEventListener("touchstart", intentarPlay);
+          document.removeEventListener("click", intentarPlay);
+          document.removeEventListener("keydown", intentarPlay);
+      };
+      document.addEventListener("scroll", intentarPlay, { passive: true });
+      document.addEventListener("touchstart", intentarPlay, { passive: true });
+      document.addEventListener("click", intentarPlay);
+      document.addEventListener("keydown", intentarPlay);
 
-      // Función de desplazamiento suave de respaldo para navegadores antiguos
-      function scrollToTop(to, duration) {
-        const start = window.scrollY || document.documentElement.scrollTop;
-        const change = to - start;
-        const increment = 20;
-        let currentTime = 0;
+      AOS.init();
 
-        const animateScroll = function () {
-          currentTime += increment;
-          const val = Math.easeInOutQuad(currentTime, start, change, duration);
-          window.scrollTo(0, val);
-          if (currentTime < duration) {
-            requestAnimationFrame(animateScroll);
+      // El botón de volver arriba es opcional: si no existe en esta invitación, no rompe nada
+      const scrollToTopBtn = document.querySelector("#scroll-to-top");
+      if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener("click", () => {
+          if ("scrollBehavior" in document.documentElement.style) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          } else {
+            scrollToTop(0, 600);
           }
-        };
+        });
 
-        Math.easeInOutQuad = function (t, b, c, d) {
-          t /= d / 2;
-          if (t < 1) return c / 2 * t * t + b;
-          t--;
-          return -c / 2 * (t * (t - 2) - 1) + b;
-        };
+        function scrollToTop(to, duration) {
+          const start = window.scrollY || document.documentElement.scrollTop;
+          const change = to - start;
+          const increment = 20;
+          let currentTime = 0;
 
-        requestAnimationFrame(animateScroll);
+          const animateScroll = function () {
+            currentTime += increment;
+            const val = easeInOutQuad(currentTime, start, change, duration);
+            window.scrollTo(0, val);
+            if (currentTime < duration) {
+              requestAnimationFrame(animateScroll);
+            }
+          };
+
+          function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+          }
+
+          requestAnimationFrame(animateScroll);
+        }
       }
-    });
+  });
+
+  function copyToClipboard(text) {
+     navigator.clipboard.writeText(text).then(() => {
+       alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
+     });
+  }
   </script>
 </body>
 </html>
